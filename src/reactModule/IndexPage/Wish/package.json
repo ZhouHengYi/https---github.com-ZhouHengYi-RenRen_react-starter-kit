@@ -1,0 +1,6 @@
+{
+  "name": "Wish",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Wish.js"
+}
