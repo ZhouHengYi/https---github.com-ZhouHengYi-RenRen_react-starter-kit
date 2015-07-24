@@ -1,0 +1,134 @@
+@import '../themecolor.less';
+
+html {
+  body {
+    background: none;
+
+    .freePage {
+      background:url("./bg.png");
+      height: 790px;
+      margin: 0 auto;
+      position: relative;
+      width: 100%;
+
+      .content {
+        width: 591px;
+        height: 509px;
+        margin: 0 auto;
+        position: relative;
+        top: 120px;
+
+        .circle {
+          display: block;
+          margin: 0 auto;
+          position: absolute;
+        }
+
+        .itemDv {
+          width: 278px;
+          height: 278px;
+          left: 50%;
+          margin-left: -119px;
+          position: relative;
+          top: 160px;
+
+          .item {
+            background-color: #b0d5f4;
+            width: 138px;
+            height: 138px;
+            //.border-radius(5px);
+            float: left;
+            padding: 20px;
+
+            i {
+              background: url('./icon.png') no-repeat;
+              display: block;
+              margin: 0 auto;
+            }
+
+            .font {
+              color: #28941a;
+              font-size: 30px;
+              text-align: center;
+            }
+
+            &.mLeft {
+              margin-left: 2px;
+            }
+
+            &.mTop {
+              margin-top: 2px;
+            }
+
+            &.uk {
+              i {
+                background-position: 0 0;
+                width: 42px;
+                height: 42px;
+              }
+
+              .font {
+                margin-top: 9px;
+              }
+            }
+
+            &.usa {
+              i {
+                background-position: 0 -89px;
+                width: 31px;
+                height: 51px;
+              }
+            }
+
+            &.au {
+              i {
+                background-position: 0 -42px;
+                width: 53px;
+                height: 48px;
+                margin-top: 3px;
+              }
+            }
+
+            &.jp {
+              i {
+                background-position: 0 -139px;
+                width: 60px;
+                height: 48px;
+                margin-top: 3px;
+              }
+            }
+
+            &:hover {
+              cursor: pointer;
+              background-color: #fff;
+              //.transition();
+            }
+
+            &.active {
+              background-color: #fff;
+            }
+          }
+        }
+
+        button {
+          height: 70px;
+          left: 190px;
+          position: relative;
+          top: 220px;
+          width: 250px;
+          background-color: transparent;
+          color: #49c4fa;
+          font-size: 36px;
+          border: 2px solid #7ecef4;
+          //.border-radius(5px);
+
+          &:hover {
+            background-color: #fff;
+            //.transition();
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

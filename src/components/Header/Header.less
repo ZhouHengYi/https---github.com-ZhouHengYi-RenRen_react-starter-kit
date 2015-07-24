@@ -1,54 +1,199 @@
 /* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
 
-@import '../variables.less';
 
-@brand-color: #61dafb;
+@import '../themecolor.less';
 
-.Header {
-  background: #373277;
-  color: #fff;
+.nav {
+  width: 100%;
+  z-index: 1200;
+  background: #fff;
+  position: relative;
 
-  &-container {
+  &.sticky-header {
+    .nav-box {
+
+      .header-box {
+        margin: 10px auto;
+
+        .menu-box {
+          .menu {
+            li {
+
+              .home-menu {
+                background: url("./home-big.png") center center no-repeat;
+              }
+
+              .free-menu {
+                background: url("./free-big.png") center center no-repeat;
+              }
+
+
+              .news-menu {
+                background: url("./news-big.png") center center no-repeat;
+              }
+
+              .college-menu {
+                background: url("./college-big.png") center center no-repeat;
+              }
+
+              .tutor-menu {
+                height: 42px;
+                width: 60px;
+                background: url("./tutor-big.png") center center no-repeat;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .nav-box {
+    width: 1024px;
     margin: 0 auto;
-    padding: 20px 0;
-    max-width: @max-content-width;
-  }
 
-  &-brand {
-    color: lighten(@brand-color, 10%);
-    text-decoration: none;
-    font-size: 1.75em; // ~28px
-  }
+    .header-box {
+      float: left;
+      height: 54px;
+      margin: 35px auto;
 
-  &-brandImg {
+      .logo {
+        width: 169px;
+        height: 42px;
+        margin: auto 36px auto 30px;
+        float: left;
+      }
 
-  }
+      .language {
+        width: 110px;
+        height: 42px;
+        float: left;
+        margin-right: 75px;
 
-  &-brandTxt {
-    margin-left: 10px;
-  }
+        .line {
+          margin: 2px auto 7px auto;
+        }
 
-  &-nav {
-    float: right;
-    margin-top: 6px;
-  }
+        a {
+          color: #989898;
+          font-size: 12px;
 
-  &-banner {
-    text-align: center;
-  }
 
-  &-bannerTitle {
-    margin: 0;
-    padding: 10px;
-    font-weight: normal;
-    font-size: 4em;
-    line-height: 1em;
-  }
+          img {
+            vertical-align: text-bottom;
+            margin-right: 5px;
+          }
 
-  &-bannerDesc {
-    padding: 0;
-    color: rgba(255, 255, 255, .5);
-    font-size: 1.25em;
-    margin: 0;
+          &.first {
+            margin-right: 22px;
+          }
+
+          &.active {
+            color: @themecolor;
+          }
+
+          &:hover {
+            color: @themecolor;
+          }
+        }
+      }
+
+      .menu-box {
+        float: left;
+
+        .menu {
+          li {
+            margin-right: 14px;
+            float: left;
+            height: 54px;
+            text-align: center;
+            border-bottom: 0;
+            cursor: pointer;
+            overflow:hidden;
+            .bg{
+              display:none;
+              //.transparent-bgcolor(#fff,0.5);
+              width:100%;
+              height: 54px;
+              position:relative;
+              top:-54px;
+            }
+            &.disabled {
+              cursor: auto;
+              .bg{
+                display:block;
+              }
+
+              &:hover {
+                border: none;
+              }
+
+              a {
+                cursor: auto;
+              }
+            }
+
+            a {
+              //.outline-none();
+            }
+
+            .home-menu {
+              display: block;
+              height: 42px;
+              width: 60px;
+              background: url("./home.png") top center no-repeat;
+            }
+
+            .free-menu {
+              display: block;
+              height: 42px;
+              width: 60px;
+              background: url("./free.png") top center no-repeat;
+            }
+
+            .open-class-menu {
+              display: block;
+              height: 42px;
+              width: 60px;
+              background: url("./open-class.png") top center no-repeat;
+            }
+
+            .news-menu {
+              display: block;
+              height: 42px;
+              width: 60px;
+              background: url("./news.png") top center no-repeat;
+            }
+
+            .college-menu {
+              display: block;
+              height: 42px;
+              width: 60px;
+              background: url("./college.png") top center no-repeat;
+            }
+
+            .tutor-menu {
+              display: block;
+              height: 42px;
+              width: 90px;
+              background: url("./tutor.png") top center no-repeat;
+            }
+
+            &.active {
+              border-bottom: 2px solid @themecolor;
+            }
+
+            &:hover {
+              border-bottom: 2px solid @themelightcolor;
+
+              &.active {
+                border-bottom: 2px solid @themecolor;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

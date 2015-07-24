@@ -7,15 +7,18 @@ import withStyles from '../../decorators/withStyles';
 import AppActions from '../../actions/AppActions';
 import AppStore from '../../stores/AppStore';
 import Header from '../Header';
+import IndexPage from '../IndexPage';
 import ContentPage from '../ContentPage';
 import ContactPage from '../ContactPage';
 import LoginPage from '../LoginPage';
 import RegisterPage from '../RegisterPage';
 import NotFoundPage from '../NotFoundPage';
-import Feedback from '../Feedback';
-import Footer from '../Footer';
 
-const pages = { ContentPage, ContactPage, LoginPage, RegisterPage, NotFoundPage };
+import Footer from '../Footer';
+import FreeGuide from '../FreeGuide';
+import StudySolution from '../FreeGuide/StudySolution';
+
+const pages = { IndexPage,ContentPage, ContactPage, LoginPage, RegisterPage, NotFoundPage,FreeGuide,StudySolution };
 
 @withContext
 @withStyles(styles)
@@ -41,14 +44,14 @@ class App {
     let component;
 
     switch (this.props.path) {
-
       case '/':
+        component = <IndexPage />;
+            break;
       case '/about':
       case '/privacy':
         let page = AppStore.getPage(this.props.path);
         component = React.createElement(pages[page.component], page);
         break;
-
       case '/contact':
         component = <ContactPage />;
         break;
@@ -60,13 +63,22 @@ class App {
       case '/register':
         component = <RegisterPage />;
         break;
+
+      case '/FreeGuide':
+        component = <FreeGuide />;
+        break;
+      case '/StudySolution':
+        component = <StudySolution />;
+        break;
+      default :
+        component = <IndexPage />;
+        break;
     }
 
     return component ? (
       <div>
         <Header />
         {component}
-        <Feedback />
         <Footer />
       </div>
     ) : <NotFoundPage />;

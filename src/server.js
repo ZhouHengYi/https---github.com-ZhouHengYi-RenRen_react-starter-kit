@@ -9,7 +9,7 @@ import React from 'react';
 import './core/Dispatcher';
 import './stores/AppStore';
 import db from './core/Database';
-import App from './reactModule/App';
+import App from './components/App';
 
 const server = express();
 
@@ -26,13 +26,13 @@ server.use('/api/query', require('./api/query'));
 // -----------------------------------------------------------------------------
 
 // The top-level React component + HTML template for it
-const templateFile = path.join(__dirname, 'templates/default.html');
+const templateFile = path.join(__dirname, 'templates/index.html');
 const template = _.template(fs.readFileSync(templateFile, 'utf8'));
 
 server.get('*', async (req, res, next) => {
   try {
     // TODO: Temporary fix #159
-    if (['/', '/about', '/privacy','/default','/FreeToDealWith'].indexOf(req.path) !== -1) {
+    if (['/', '/about', '/privacy'].indexOf(req.path) !== -1) {
       await db.getPage(req.path);
     }
     let notFound = false;

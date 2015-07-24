@@ -1,41 +1,223 @@
-/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
 
-//
-// Colors
-// -----------------------------------------------------------------------------
+@import "./function.less";
+@import "./themecolor.less";
+html {
+  &.ie8 {
+    .bootstrap-select {
+      .btn-default {
+        &.dropdown-toggle {
+          &:after, &:before {
+            //ie8 :after :before bug
+            content: normal;
+          }
+        }
+      }
+    }
+  }
 
-@white-base:            hsl(255, 255, 255);
+  body {
+    background: url("./WebResources/Default/Images/html-bg.jpg") repeat;
+    a {
+      cursor: pointer;
+      .outline-none();
+    }
 
-@gray-base:             hsl(0, 0, 0);
-@gray-darker:           lighten(@gray-base, 13.5%); // #222
-@gray-dark:             lighten(@gray-base, 25%);   // #404040
-@gray:                  lighten(@gray-base, 33.5%); // #555
-@gray-light:            lighten(@gray-base, 46.7%); // #777
-@gray-lighter:          lighten(@gray-base, 93.5%); // #eee
+    input, button {
+      -moz-outline: none;
+      outline: none;
+    }
 
-//
-// Typography
-// -----------------------------------------------------------------------------
+    color: #000;
+    font-size: 14px;
+    line-height: normal;
 
-@font-family-base:      'Segoe UI', 'HelveticaNeue-Light', sans-serif;
+    dd, dt {
+      line-height: normal;
+    }
 
-//
-// Layout
-// -----------------------------------------------------------------------------
+    h1 {
+      margin: auto;
+    }
 
-@max-content-width:     1000px;
 
-//
-// Media queries breakpoints
-// -----------------------------------------------------------------------------
 
-@screen-xs-min:         480px;  // Extra small screen / phone
-@screen-sm-min:         768px;  // Small screen / tablet
-@screen-md-min:         992px;  // Medium screen / desktop
-@screen-lg-min:         1200px; // Large screen / wide desktop
 
-//
-// Animations
-// -----------------------------------------------------------------------------
+    .bootstrap-select {
+      &.open {
+        .btn-default {
+          &.dropdown-toggle {
+            border-color: @themecolor;
+          }
+        }
+      }
 
-@animation-swift-out:   .45s cubic-bezier(0.3, 1, 0.4, 1) 0s;
+      .btn-default {
+        &.dropdown-toggle {
+          border-color: @themecolor;
+        }
+      }
+
+      .dropdown-menu {
+        border-color: @themecolor;
+
+        li {
+          padding: 0;
+
+          &.selected {
+
+            a {
+              &:hover {
+                background: @themecolor;
+                color: #fff;
+              }
+
+              background: none;
+              color: #000;
+            }
+          }
+        }
+
+        a {
+          .outline-none();
+
+          &:focus {
+            border: 0;
+          }
+
+          &:hover {
+            background: @themecolor;
+            color: #fff;
+          }
+        }
+      }
+
+      .caret {
+        display: inline-block;
+        width: 14px;
+        height: 7px;
+        margin-left: 2px;
+        vertical-align: middle;
+        border: 0;
+        background: url("./WebResources/Default/Images/select.png") no-repeat;
+      }
+
+      .dropup, .navbar-fixed-bottom {
+        .dropdown .caret, .caret {
+          border: 0;
+          content: normal;
+          background-position: left -7px;
+        }
+      }
+    }
+  }
+}
+
+
+.banner {
+  width: 100%;
+  position: relative;
+}
+
+.slideshow {
+  width: 100%;
+  text-align: center;
+
+  &.da-slider {
+    height: 680px;
+    z-index: 10;
+
+
+    .slider-nav {
+      width: 1024px;
+      margin: 0 auto;
+      position: relative;
+      bottom: -624px;
+      height: 32px;
+      text-align: right;
+      padding-right: 20px;
+
+      .da-arrows {
+        .user-select();
+        height: 32px;
+        width: 80px;
+        display: inline-block;
+        vertical-align: bottom;
+        z-index: 120;
+      }
+
+      .da-arrows span {
+        margin-left: 3px;
+      }
+
+      .da-dots {
+        width: 60%;
+        text-align: center;
+        .user-select();
+        display: inline-block;
+        z-index: 120;
+      }
+
+      .da-dots span {
+        display: inline-block;
+        position: relative;
+        width: 12px;
+        height: 12px;
+        .border-radius(50%);
+        background: none;
+        border: 1px solid #fff;
+        margin: auto 8px 5px auto;
+
+        &.da-dots-current {
+          background: #fff;
+        }
+      }
+    }
+  }
+}
+
+.wrap {
+  display: table;
+  _position: relative;
+
+  .subwrap {
+    vertical-align: middle;
+    display: table-cell;
+    _position: absolute;
+    _top: 50%;
+
+    .middle {
+      _position: relative;
+      _top: -50%;
+    }
+  }
+}
+
+.star {
+  width: 100px;
+  background: url("./WebResources/Default/Images/star-hollow.png") no-repeat 0 0;
+  height: 20px;
+
+  &.dark {
+    background-image: url("./WebResources/Default/Images/star-dark.png");
+  }
+
+  &.one {
+    background-position: 0 0;
+  }
+
+  &.two {
+    background-position: 0 -20px;
+  }
+
+  &.three {
+    background-position: 0 -40px;
+  }
+
+  &.four {
+    background-position: 0 -60px;
+  }
+
+  &.five {
+    background-position: 0 -80px;
+  }
+}

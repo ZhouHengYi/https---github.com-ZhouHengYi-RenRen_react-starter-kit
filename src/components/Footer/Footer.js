@@ -23,18 +23,53 @@ class Footer {
     this.renderCss(`.Footer-viewport:after {content:' ${width}x${height}';}`);
 
     return (
-      <div className="Footer">
-        <div className="Footer-container">
-          <span className="Footer-text">© Your Company</span>
-          <span className="Footer-spacer">·</span>
-          <a className="Footer-link" href="/" onClick={Link.handleClick}>Home</a>
-          <span className="Footer-spacer">·</span>
-          <a className="Footer-link" href="/privacy" onClick={Link.handleClick}>Privacy</a>
-          <span className="Footer-spacer">·</span>
-          <a className="Footer-link" href="/not-found" onClick={Link.handleClick}>Not Found</a>
-          <span className="Footer-spacer"> | </span>
-          <span ref="viewport" className="Footer-viewport Footer-text Footer-text--muted">Viewport:</span>
-        </div>
+      <div>
+        <footer>
+          <div className="QR">
+            <ul id="QR">
+              <li className="weibo">
+                <div className="qr-view">
+                  <div className="qr-box"><img src="/WebResources/Default/images/qr/weibo.jpg" /></div>
+                </div>
+              </li>
+              <li className="weixin">
+                <div className="qr-view">
+                  <div className="qr-box"><img src="/WebResources/Default/images/qr/weixin.jpg" /></div>
+                </div>
+              </li>
+              <li className="renren">
+              </li>
+            </ul>
+            <div className="clear"></div>
+            <hr />
+          </div>
+          <div className="clear"></div>
+          <div className="menu">
+            <ul className="first">
+              <li><b>关于</b></li>
+              <li><a href="#">关于我们</a></li>
+              <li><a href="#">渠道合作</a></li>
+              <li><a href="#">联系我们</a></li>
+              <li><a href="#">荣誉报道</a></li>
+            </ul>
+            <ul className="second">
+              <li><b>帮助</b></li>
+              <li><a href="/register.aspx">用户注册</a></li>
+              <li><a className="login-button">用户登录</a></li>
+              <li><a className="forgotpass-button">找回密码</a></li>
+              <li><a href="#">给我留言</a></li>
+            </ul>
+            <ul className="third">
+              <li><b>社交</b></li>
+              <li><a href="http://weibo.com/u/5395532052?from=myfollow_all">人人日本</a></li>
+              <li><a href="http://weibo.com/u/5395532052?from=myfollow_all">人人美国</a></li>
+              <li><a href="http://weibo.com/u/5395532052?from=myfollow_all">人人英国</a></li>
+              <li><a href="http://weibo.com/u/5395532052?from=myfollow_all">人人澳洲</a></li>
+            </ul>
+          </div>
+          <div className="clear"></div>
+          <p>© Copyright 2015 www.rrliuxue.com</p>
+        </footer>
       </div>
     );
   }
