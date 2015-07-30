@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05c22e5c-d967-4f99-b781-d726b3d3893b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/public/favicon.ico" afterPath="$PROJECT_DIR$/src/public/favicon.ico" />
-    </list>
+    <list default="true" id="05c22e5c-d967-4f99-b781-d726b3d3893b" name="Default" comment="" />
     <ignored path="https---github.com-ZhouHengYi-RenRen_react-starter-kit.git.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -109,7 +107,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="606" />
+    <option name="x" value="608" />
     <option name="y" value="23" />
     <option name="width" value="1274" />
     <option name="height" value="954" />
@@ -308,7 +306,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="606" y="23" width="1274" height="954" extended-state="0" />
+    <frame x="608" y="23" width="1274" height="954" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
