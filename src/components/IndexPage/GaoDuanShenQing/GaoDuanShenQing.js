@@ -1,6 +1,7 @@
 /*! React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
 
 import React, { PropTypes } from 'react';
+import $ from 'jquery';
 
 class GaoDuanShenQing {
 
@@ -71,7 +72,16 @@ class GaoDuanShenQing {
                 </section>
         );
     }
+    //dom加载完调用
+    componentDidMount(){
+        $(document).ready(function(){
+            $("#tutorList").find("li").click(function () {
+                $(this).parent().find("li").removeClass("active");
+                $(this).addClass("active");
+            });
 
+        })
+    }
 }
 
 export default GaoDuanShenQing;

@@ -1,0 +1,61 @@
+﻿@import "themecolor.less";
+@import "function.less";
+
+.reveal-modal-bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    .transparent-bgcolor();
+    z-index: 1300;
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+.reveal-modal {
+    visibility: hidden;
+    top: 100px;
+    left: 50%;
+    width: 500px;
+    margin-left: -250px;
+    background: #fff;
+    position: absolute;
+    z-index: 1301;
+
+    input, button {
+        display: none;
+    }
+
+    .close-reveal-modal {
+        cursor: pointer;
+        background: data-uri('../images/reveal-modal-close.png') no-repeat center center;
+        .transition(all 0.3s ease-in-out);
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 12.5px;
+        right: 20px;
+        display: none;
+    }
+    h3 {
+        height: 50px;
+        line-height: 50px;
+        font-size: 18px;
+        margin: auto;
+        background: @themecolor;
+        color: #fff;
+        padding: 0 0 0 20px;
+    }
+
+    &.show {
+        &.reveal-modal {
+            .close-reveal-modal {
+                display: block;
+            }
+
+            input, button {
+                display: block;
+            }
+        }
+    }
+}

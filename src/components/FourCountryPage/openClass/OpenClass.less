@@ -1,0 +1,316 @@
+@import "../../themecolor.less";
+@import "../../function.less";
+@import '../../control.less';
+
+
+html{
+  body{
+    .open-class {
+      width: 1024px;
+      margin: 0 auto;
+      position: relative;
+      padding-top: 15px;
+
+      .section-title {
+        border-bottom: 1px solid @hrcolor;
+
+        h1 {
+          font-size: 18px;
+          //font-weight: 600;
+          float: left;
+          line-height: 38px;
+          margin: auto 30px auto 20px;
+        }
+
+        .filter {
+          padding: 9px 0;
+
+          li {
+            background: none;
+            float: left;
+            padding: 3px 13px;
+            .border-radius(3px);
+            margin-right: 3px;
+            .transition(.5s);
+            cursor: pointer;
+            color: @themecolor;
+
+            &.selected {
+              color: #fff;
+              background: @themecolor;
+            }
+
+            &:hover {
+              &.active {
+                background: @themecolor;
+              }
+
+              background: @themelightcolor;
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .open-class-content {
+        width: 100%;
+
+        .content {
+          width: 984px;
+          margin: 0 auto;
+          position: relative;
+          padding-top: 15px;
+
+          .first-box {
+            .search-class {
+              float: left;
+              background: url(../../WebResources/Default/Images/open-class/search-class-bg.jpg) no-repeat;
+              background-size: 100% auto;
+              margin-right: 10px;
+              width: 426px;
+              height: 295px;
+
+              .search-class-input {
+                background: url(../../WebResources/Default/Images/open-class/search-class-btn.png) no-repeat;
+                background-size: 100% auto;
+                margin: 130px auto auto auto;
+                width: 280px;
+                height: 50px;
+
+                input {
+                  background: none;
+                  border: 0;
+                  width: 280px;
+                  height: 50px;
+                  padding: 2px 0 0 15px;
+                  font-size: 15px;
+                  line-height: 50px;
+                  float: left;
+
+                  &:focus, &:hover {
+                    .transparent-bgcolor(#000,0.2);
+                    border: 0;
+                    .box-shadow(none);
+                  }
+                }
+
+                button {
+                  width: 52px;
+                  height: 50px;
+                  background: none;
+                  border: 0;
+                  padding-top: 3px;
+                  float: right;
+                  margin-top: -50px;
+                }
+              }
+            }
+
+            .new-class {
+              float: left;
+              margin-right: 10px;
+              width: 315px;
+
+              .class-info {
+                width: 315px;
+                height: 230px;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+
+              .class-desc {
+                background: #fff;
+                line-height: 65px;
+                font-size: 17px;
+                font-weight: bold;
+
+                .date {
+                  float: left;
+                  margin-left: 15px;
+                  color: @themecolor;
+                }
+
+                .detail {
+                  float: right;
+                  margin-right: 15px;
+
+                  a {
+                    color: #000;
+                    text-decoration: none;
+                  }
+                }
+              }
+            }
+
+            .other-class {
+              float: left;
+              width: 220px;
+
+              ul {
+                margin: auto;
+                padding: 0;
+
+                li {
+                  position: relative;
+                  width: 220px;
+                  height: 142px;
+                  margin-bottom: 11px;
+                  overflow: hidden;
+
+                  img {
+                    display: block;
+                    width: 220px;
+                    height: 142px;
+                  }
+
+                  .title-box {
+                    width: 220px;
+                    height: 142px;
+                    position: absolute;
+                    margin-top: -142px;
+
+                    .title {
+                      width: 220px;
+                      height: 142px;
+                      position: relative;
+                      z-index: 3;
+
+                      h5 {
+                        position: relative;
+                        margin: auto;
+                        text-align: center;
+                        font-size: 18px;
+
+                        padding: 30px 0 0 0;
+                        top: -15px;
+                        .opacity(0);
+                        a{
+                          color: @openclasshcolor;
+                          text-decoration:none;
+                        }
+                      }
+
+                      .lecturer {
+                        position: relative;
+                        color: #fff;
+                        font-size: 14px;
+                        padding: 10px 0;
+                        text-align: center;
+                        .opacity(0);
+                      }
+
+                      .description {
+                        position: relative;
+                        text-align: center;
+                        color: #fff;
+                        font-size: 12px;
+                        .opacity(0);
+                        top: 15px;
+
+                        .number {
+                          color: @themecolor;
+                          font-size: 18px;
+                          font-family: 'Arial','Microsoft YaHei';
+                          font-style: italic;
+                        }
+
+                        .date {
+                          margin: auto 6px auto 12px;
+                        }
+                      }
+                    }
+
+                    .title-bg {
+                      position: relative;
+                      width: 220px;
+                      height: 142px;
+                      background: #000;
+                      .opacity(0.55);
+                      top: -142px;
+                      z-index: 2;
+                      display: none;
+                    }
+                  }
+                }
+              }
+            }
+
+            .student-evaluation {
+              float: left;
+              width: 220px;
+              border: 1px solid @themecolor;
+              height: 293px;
+              background: #fff;
+
+              h1 {
+                background: @themecolor;
+                color: #fff;
+                line-height: 38px;
+                text-align: center;
+                font-size: 17px;
+              }
+
+              .evaluation-list {
+                padding: 0 12px;
+
+                .evaluation-item {
+                  padding: 8px 0;
+
+                  &:first-child {
+                    border-bottom: 1px solid @hrcolor;
+                  }
+
+                  .head-pic {
+                    float: left;
+                    width: 50px;
+                    height: 50px;
+
+                    img {
+                      width: 50px;
+                      height: 50px;
+                      .border-radius(50%);
+                    }
+                  }
+
+                  .evaluation-info {
+                    float: left;
+                    margin-left: 8px;
+
+                    .student-name {
+                      line-height: 25px;
+                    }
+
+                    .class-name {
+                      color: @themecolor;
+
+                      a {
+                        color: @themecolor;
+                      }
+                    }
+                  }
+
+                  .evaluation-content {
+                    color: #676767;
+                  }
+                }
+              }
+
+              .more {
+                text-align: right;
+                padding-right: 14px;
+                margin-top: 20px;
+
+                a {
+                  color: @themecolor;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

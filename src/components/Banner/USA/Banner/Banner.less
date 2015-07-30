@@ -1,0 +1,201 @@
+@import "../../../themecolor.less";
+@import "../../../function.less";
+@import "../../Index/Select.less";
+@import "../../Index/animations.less";
+@import "../../Index/animations1024.less";
+@import "../../Index/animations1250.less";
+@smallThingAnimduration: 15s;
+
+/** USA **/
+@usathemecolor: #ff5e52;
+
+html{
+  body{
+    .bgShadow{
+        background-color: #ffeaac;
+        display: block;
+        height: 680px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .usa-banner1 {
+        background: url(../../../WebResources/Default/Images/banner/USA/bg.jpg) no-repeat center top #ffeaac;
+        position: relative;
+        height: 680px;
+        h2 {
+          margin: auto;
+          left: 66%;
+          bottom: 0;
+          position: absolute;
+        }
+
+        .da-img {
+          left: 48%;
+          top: 128px;
+          position: absolute;
+        }
+        &.slick-active {
+          h2 {
+            .animation(usafromRightAnim1 0.8s ease-in 0.8s both);
+          }
+          .da-img {
+            .animation(usafromRightAnim2 0.6s ease-in 1s both);
+          }
+        }
+      }
+
+
+    .plan-box {
+      width: 1024px;
+      margin: -627px auto;
+      padding-left: 45px;
+      position: relative;
+      z-index: 10;
+
+      form {
+        width: 416px;
+        height: 387px;
+        background: url(../../../WebResources/Default/Images/plan/USA-form.png) no-repeat;
+
+        h1 {
+          font-weight: bold;
+          text-align: center;
+          font-size: 22px;
+          padding-top: 68px;
+          margin-bottom: 20px;
+        }
+
+        ul {
+          width: 270px;
+          margin: 0 auto;
+
+          .dropdown-menu {
+            li {
+              padding: 0;
+            }
+          }
+
+          li {
+            padding: 7px 0;
+          }
+
+          select, button, input {
+            width: 100%;
+            line-height: normal;
+          }
+
+          .bootstrap-select {
+            .btn-default {
+              &.dropdown-toggle {
+                border-color: @graydeepcolor;
+              }
+            }
+
+            &.open {
+              .btn-default {
+                &.dropdown-toggle {
+                  border-color: @usathemecolor;
+                }
+              }
+            }
+
+            .dropdown-menu {
+              border-color: @usathemecolor;
+
+              li {
+                padding: 0;
+
+                &.selected {
+
+                  a {
+                    &:hover {
+                      background: @usathemecolor;
+                      color: #fff;
+                    }
+
+                    background: none;
+                    color: #000;
+                  }
+                }
+              }
+
+              a {
+
+                &:focus {
+                  border: 0;
+                }
+
+                &:hover {
+                  background: @usathemecolor;
+                  color: #fff;
+                }
+              }
+            }
+
+            &.show-menu-arrow {
+              .form-control, &.form-control {
+                height: 45px;
+              }
+
+              .filter-option, .text {
+                font-size: 17px;
+              }
+
+              .filter-option {
+                color: @graydeepcolor;
+              }
+            }
+          }
+
+
+          button.btn-plan {
+            height: 45px;
+            background: url("../../../WebResources/Default/Images/left.png") no-repeat 88% center @usathemecolor;
+            color: #fff;
+            border: 1px solid @usathemecolor;
+            font-size: 22px;
+            font-weight: bold;
+            .border-radius(5px);
+            text-align: left;
+            padding-left: 35px;
+            line-height: 45px;
+          }
+        }
+
+        .bottom {
+          position: absolute;
+          bottom: 37px;
+          width: 416px;
+
+          p {
+            margin: auto;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            color: @usathemecolor;
+          }
+
+          .message {
+            margin-top: 5px;
+            background: url("../../../WebResources/Default/Images/horn-red.png") no-repeat 118px top;
+            padding-left: 142px;
+            font-size: 12px;
+            color: #000;
+
+            span {
+              color: @usathemecolor;
+              padding: 0 3px;
+            }
+
+            a {
+              text-decoration: underline;
+              color: @usathemecolor;
+            }
+          }
+        }
+      }
+    }
+    }
+  }

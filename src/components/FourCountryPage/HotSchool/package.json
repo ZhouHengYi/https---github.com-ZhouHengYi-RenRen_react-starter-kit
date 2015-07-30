@@ -1,0 +1,6 @@
+{
+  "name": "HotSchool",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./HotSchool.js"
+}

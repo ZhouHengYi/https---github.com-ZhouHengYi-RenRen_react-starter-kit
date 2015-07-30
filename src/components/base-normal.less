@@ -1,0 +1,319 @@
+﻿@import "themecolor.less";
+@import "function.less";
+
+@import "variables.less";
+
+@tablinebgbolor: #EDEDED;
+
+
+.flow {
+  width: 1024px;
+  margin: 10px auto 30px auto;
+  position: relative;
+  padding-top: 30px;
+
+
+  .flow-box {
+    margin: 25px auto auto auto;
+    width: 1005px;
+
+    .one {
+      .one-line {
+        width: 429px;
+        height: 75px;
+        background: url(./WebResources/Default/Images/flow/one-one-line.png);
+        float: left;
+      }
+
+      .easy {
+        width: 210px;
+        height: 75px;
+        background: url(./WebResources/Default/Images/flow/easy.png);
+        float: left;
+        .transform(scale(0.9));
+        .transition(.5s);
+
+        &:hover {
+          width: 210px;
+          .transform(scale(1));
+        }
+      }
+
+      .two-line {
+        width: 186px;
+        height: 75px;
+        background: url(./WebResources/Default/Images/flow/one-two-line.png);
+        float: left;
+      }
+
+      .free {
+        width: 180px;
+        height: 75px;
+        background: url(./WebResources/Default/Images/flow/free.png);
+        float: left;
+        .transform(scale(0.9));
+        .transition(.5s);
+
+        &:hover {
+          width: 180px;
+          .transform(scale(1));
+        }
+      }
+    }
+
+    .two {
+      .caring {
+        width: 180px;
+        height: 51px;
+        background: url(./WebResources/Default/Images/flow/caring.png);
+        .transform(scale(0.9));
+        .transition(.5s);
+
+        &:hover {
+          width: 180px;
+          .transform(scale(1));
+        }
+      }
+    }
+
+    .three {
+      .one-line {
+        width: 429px;
+        height: 72px;
+        background: url(./WebResources/Default/Images/flow/three-one-line.png);
+        float: left;
+      }
+
+      .efficient {
+        width: 210px;
+        height: 72px;
+        background: url(./WebResources/Default/Images/flow/efficient.png);
+        float: left;
+        .transform(scale(0.9));
+        .transition(.5s);
+
+        &:hover {
+          width: 210px;
+          .transform(scale(1));
+        }
+      }
+
+      .two-line {
+        width: 186px;
+        height: 72px;
+        background: url(./WebResources/Default/Images/flow/three-two-line.png);
+        float: left;
+      }
+
+      .overall {
+        width: 180px;
+        height: 72px;
+        background: url(./WebResources/Default/Images/flow/overall.png);
+        float: left;
+        .transform(scale(0.9));
+        .transition(.5s);
+
+        &:hover {
+          width: 180px;
+          .transform(scale(1));
+        }
+      }
+    }
+  }
+}
+
+/** 排名 **/
+.school-rank {
+  width: 1024px;
+  margin: 0 auto;
+  position: relative;
+
+  .rank-tabs-box {
+    .rank-tabs {
+      position: relative;
+      z-index: 2;
+
+      .item {
+        float: left;
+        margin-right: 20px;
+
+        .title {
+          cursor: pointer;
+          background: #e4e4e4;
+          color: @themecolor;
+          font-size: 18px;
+          padding: 12px 20px;
+          .transition();
+        }
+
+        .arrow {
+          background: url("./WebResources/Default/Images/rank-allow.png") no-repeat @tablinebgbolor;
+          width: 22px;
+          height: 15px;
+          display: none;
+          margin: 20px auto 0;
+        }
+
+        &.selected {
+          .title {
+            background: @themecolor;
+            color: #fff;
+            font-size: 18px;
+          }
+
+          .arrow {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .rank-tab-content {
+      position: relative;
+      z-index: 1;
+      margin-top: -2px;
+
+      .rank-content-box {
+        padding: 20px 15px 0;
+        border: 1px solid @themecolor;
+
+        .rank-school-category {
+          width: 990px;
+          overflow: hidden;
+          padding-bottom: 10px;
+          border-bottom: 1px dashed @hrcolor;
+          margin-bottom: 10px;
+
+          h4 {
+            background: url("./WebResources/Default/Images/title-star.png") no-repeat left center;
+            padding-left: 20px;
+            margin: auto 0 20px;
+            font-size: 18px;
+            font-weight: bold;
+          }
+
+          &.full {
+            border: 0;
+          }
+
+          .more {
+            position: absolute;
+            right: 30px;
+            margin-top: -35px;
+
+            a {
+              color: @themecolor;
+            }
+          }
+
+          .school-list {
+            width: 1050px;
+
+            .school-item {
+              width: 255px;
+              overflow: hidden;
+              float: left;
+              a{
+                text-decoration:none;
+                .outline-none();
+              }
+              .school-logo {
+                width: 200px;
+                height: 100px;
+                border: 1px solid @hrcolor;
+                margin-bottom: 6px;
+                display: table;
+
+                .logo {
+                  width: 100%;
+                  display: table-cell;
+                  vertical-align: middle;
+                  text-align: center;
+                  padding: 1px;
+                  img {
+                    max-width: 100%;
+                  }
+                }
+              }
+
+              .school-name {
+                font-size: 14px;
+                margin-bottom: 4px;
+
+                &.en {
+                  font-size: 12px;
+                }
+
+                a {
+                  color: #000;
+                }
+              }
+
+              .school-tag {
+                margin-bottom: 10px;
+
+                span {
+                  border: 1px solid #eb6877;
+                  .border-radius(5px);
+                  padding: 2px 6px;
+                  margin-right: 10px;
+                  font-size: 12px;
+                }
+              }
+
+              .action {
+                margin-left: 55px;
+
+                a {
+                  display: block;
+                  width: 90px;
+                  height: 30px;
+                  line-height: 30px;
+                  background: @themecolor;
+                  color: #fff;
+                  text-decoration: none;
+                  text-align: center;
+                  .border-radius(5px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/** 飞机广告 **/
+.plan {
+  width: 1024px;
+  margin: 20px auto;
+  position: relative;
+  height: 120px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .action {
+    position:absolute;
+    margin: -78px 0 0 0;
+    right:110px;
+    a {
+      display:block;
+      border: 1px solid #000;
+      .border-radius(10px);
+      width: 130px;
+      height: 30px;
+      line-height:30px;
+      background: none;
+      color: #000;
+      font-size: 17px;
+      text-align:center;
+      text-decoration:none;
+      .outline-none();
+    }
+  }
+}

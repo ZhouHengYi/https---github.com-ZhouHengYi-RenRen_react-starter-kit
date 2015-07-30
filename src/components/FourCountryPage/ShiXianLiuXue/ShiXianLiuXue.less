@@ -1,0 +1,85 @@
+@import "../../themecolor.less";
+@import "../../function.less";
+
+@tablinebgbolor: #EDEDED;
+
+.effect-wish {
+  width: 1024px;
+  margin: 0 auto;
+  position: relative;
+
+  h1 {
+    font-size: 17px;
+    border-bottom: 1px solid @hrcolor;
+    padding: 15px 0;
+    margin-bottom: 30px;
+  }
+
+  .content {
+    width: 1020px;
+    height: 217px;
+    overflow: auto;
+    padding: 0 !important;
+
+    li {
+      float: left;
+      margin: auto auto auto 30px;
+      position: relative;
+      width: 300px;
+      height: 185px;
+      overflow: hidden;
+
+      .bg {
+        position: absolute;
+        width: 300px;
+        height: 185px;
+        background: #000;
+        .opacity(0.4);
+        z-index: 3;
+        top: 0;
+      }
+
+      .title-box {
+        width: 300px;
+        height: 40px;
+        position: absolute;
+
+        .title {
+          width: 300px;
+          height: 40px;
+          position: relative;
+          line-height: 40px;
+          font-size: 14px;
+          color: #fff;
+          padding-left: 7px;
+          z-index: 3;
+        }
+
+        .title-bg {
+          position: relative;
+          width: 300px;
+          height: 40px;
+          background: #000;
+          .opacity(0.55);
+          top: -40px;
+          z-index: 2;
+        }
+      }
+
+      img {
+        display: block;
+        width: 300px;
+        height: 185px;
+      }
+      /*&:hover {
+          .bg {
+              background: none;
+          }
+
+          .title-box {
+              margin-top: -40px;
+          }
+      }*/
+    }
+  }
+}

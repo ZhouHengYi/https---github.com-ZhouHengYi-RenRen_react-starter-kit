@@ -1,9 +1,13 @@
-/**
- * Created by henry on 15-7-22.
- */
 /*! React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
 
 import React, { PropTypes } from 'react';
+
+import styles from './NewActivity.less';
+import withStyles from '../../../decorators/withStyles';
+import $ from 'jquery'
+var CSlider = require('react-slick');
+
+@withStyles(styles)
 class NewActivity {
 
     static contextTypes = {
@@ -11,14 +15,22 @@ class NewActivity {
     };
 
     render() {
+        var settings = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+        };
         return (
             <section className="new-activity">
                 <h1>活动</h1>
                 <div className="activity-box">
                     <div className="activity-slide">
-                        <ul className="bxslider" id="activityCarousel">
-                            <li>
-                                <img src="/WebResources/Default/images/activity/lunbo1.jpg" />
+                        <CSlider {...settings}>
+                            <div>
+                                <img src="http://new.rrliuxue.com/WebResources/Default/images/activity/lunbo1.jpg" />
                                 <div className="activity-info">
                                     <p>
                                         <span className="name">人人留学雅思公益讲座</span>已报名
@@ -26,19 +38,19 @@ class NewActivity {
                                         <a href="#">报名</a>
                                     </p>
                                 </div>
-                            </li>
-                            <li>
-                                <img src="/WebResources/Default/images/activity/lunbo2.jpg" />
+                            </div>
+                            <div>
+                                <img src="http://new.rrliuxue.com/WebResources/Default/images/activity/lunbo1.jpg" />
                                 <div className="activity-info">
                                     <p>
                                         <span className="name">人人留学雅思公益讲座</span>已报名
-                                        <span className="number">292</span> 人
+                                        <span className="number">291</span> 人
                                         <a href="#">报名</a>
                                     </p>
                                 </div>
-                            </li>
-                            <li>
-                                <img src="/WebResources/Default/images/activity/lunbo1.jpg" />
+                            </div>
+                            <div>
+                                <img src="http://new.rrliuxue.com/WebResources/Default/images/activity/lunbo1.jpg" />
                                 <div className="activity-info">
                                     <p>
                                         <span className="name">人人留学雅思公益讲座</span>已报名
@@ -46,15 +58,15 @@ class NewActivity {
                                         <a href="#">报名</a>
                                     </p>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </CSlider>
                         <div className="clear"></div>
                     </div>
                 </div>
                 <div className="list">
                     <div className="item">
                         <div className="item-pic">
-                            <img data-original="/WebResources/Default/images/activity/1.png" />
+                            <img src="http://new.rrliuxue.com/WebResources/Default/images/activity/1.png" />
                         </div>
                         <div className="description">
                             <h4>日本领事馆日本文化讲座</h4>
@@ -64,7 +76,7 @@ class NewActivity {
                     </div>
                     <div className="item">
                         <div className="item-pic">
-                            <img data-original="/WebResources/Default/images/activity/2.png" />
+                            <img src="http://new.rrliuxue.com/WebResources/Default/images/activity/2.png" />
                         </div>
                         <div className="description">
                             <h4>2014中国最具公信力出国出国出国出国出国</h4>
@@ -77,7 +89,12 @@ class NewActivity {
             </section>
         );
     }
-
+    //dom加载完调用
+    componentDidMount(){
+        $(document).ready(function(){
+            console.log(1);
+        })
+    }
 }
 
 export default NewActivity;

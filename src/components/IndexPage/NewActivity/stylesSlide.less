@@ -1,0 +1,41 @@
+@import "../../function.less";
+
+html {
+    body {
+        .slick-dots {
+            bottom: 65px;
+            right: 3%;
+            width: 90px;
+            li {
+                button {
+                    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+                    border: 1px solid #49c4fa ;
+                    border-radius: 50%;
+                    display: inline-block;
+                    height: 12px;
+                    margin: auto 8px 5px auto;
+                    position: relative;
+                    width: 12px;
+
+                    &::before {
+                        content: "";
+                    }
+                }
+
+                &.slick-active {
+                    button {
+                        background: #49c4fa ;
+                    }
+                }
+            }
+        }
+
+        .slick-next {
+            display: none !important;
+        }
+
+        .slick-prev {
+            display: none !important;
+        }
+    }
+}

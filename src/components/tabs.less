@@ -1,0 +1,38 @@
+﻿@import "themecolor.less";
+@import "function.less";
+
+
+.tabs-box {
+    &.tabs-line {
+        .tabs {
+            position:relative;
+            z-index:2;
+            height: 46px;
+            top:3px;
+            .item {
+                border-top: 3px solid @tablinebgbolor;
+                border-left: 3px solid @tablinebgbolor;
+                border-right: 3px solid @tablinebgbolor;
+                border-bottom: 0;
+                background: @tablinebgbolor;
+                float: left;
+                height:43px;
+                line-height:43px;
+                padding:0 20px;
+                .transition(all 0.2s ease-in-out);
+                cursor:pointer;
+                font-size:18px;
+                &.selected {
+                    border-color: @themecolor;
+                    height: 46px;
+                }
+            }
+        }
+
+        .tab-content {
+            border-top: 3px solid @themecolor;
+            position:relative;
+            z-index:1;
+        }
+    }
+}

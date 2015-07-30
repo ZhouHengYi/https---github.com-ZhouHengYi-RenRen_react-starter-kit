@@ -12,6 +12,7 @@ import OpenClass from './OpenClass/OpenClass.js';
 import GaoDuanShenQing from './GaoDuanShenQing/GaoDuanShenQing.js';
 import NewActivity from './NewActivity/NewActivity.js';
 import EffectWish from './EffectWish/EffectWish.js';
+import $ from 'jquery';
 
 @withStyles(styles)
 class IndexPage {
@@ -24,7 +25,7 @@ class IndexPage {
     let title = 'RenRenLiuXue';
     this.context.onSetTitle(title);
     return (
-      <div className="IndexPage">
+      <div className="IndexPage" onLoad={this.handleGoClick}>
         <Banner_Index />
         <Wish />
         <OpenClass />
@@ -63,7 +64,6 @@ class IndexPage {
       </div>
     );
   }
-
 }
 
 export default IndexPage;

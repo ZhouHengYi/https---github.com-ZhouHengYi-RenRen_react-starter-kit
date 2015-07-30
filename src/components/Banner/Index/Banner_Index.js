@@ -1,68 +1,21 @@
 /*! React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
 
 import React from 'react';
+var Select = require('rc-select');
+var Option = Select.Option;
 
+import styles from "./Select.less";
+import withViewport from '../../../decorators/withViewport';
+import withStyles from '../../../decorators/withStyles';
+import Slide from "./Slide/Slide.js";
+import $ from 'jquery'
+
+@withStyles(styles)
 class Banner_Index {
   render() {
     return (
       <section className="banner">
-        <div id="da-slider" className="slideshow da-slider">
-          <div className="da-slide home-banner1 da-slide-current" data-bg="url(http://new.rrliuxue.com/WebResources/Default/images/banner/home/sky.png) no-repeat 25% top #49c4fa">
-            <h2>
-              <img src="http://new.rrliuxue.com/WebResources/Default/images/banner/home/plane.png" /></h2>
-            <p>
-              <img src="http://new.rrliuxue.com/WebResources/Default/images/banner/home/2015.png" alt="2015 带你留学" />
-            </p>
-            <div className="da-img">
-              <img src="http://new.rrliuxue.com/WebResources/Default/images/banner/home/multiple-country.png" />
-            </div>
-          </div>
-          <div className="da-slide home-banner2" data-bg="url(public/Default/images/banner/home/2/bg.jpg) no-repeat center top #2d2f3e">
-            <div className="slide-img-box">
-              <div className="slide-img-content">
-                <div className="arrow">
-                  <img src="http://new.rrliuxue.com/WebResources/Default/images/banner/home/2/arrow.png" />
-                </div>
-                <div className="text-content">
-                  <div className="text1">
-                    <img src="http://new.rrliuxue.com/WebResources/Default/images/banner/home/2/text1.png" />
-                  </div>
-                  <div className="text2">
-                    <img src="http://new.rrliuxue.com/WebResources/Default/images/banner/home/2/text2.png" />
-                  </div>
-                  <div className="text3">
-                    <img src="http://new.rrliuxue.com/WebResources/Default/images/banner/home/2/text3.png" />
-                  </div>
-                </div>
-                <div className="clear"></div>
-              </div>
-            </div>
-          </div>
-          <div className="da-slide home-banner3" data-bg="url(public/Default/images/banner/home/3/bg.jpg) no-repeat center top #fcba1e">
-            <div className="slide-img-box">
-              <div className="slide-img-content">
-                <div className="text1">
-                  <img src="http://new.rrliuxue.com/WebResources/Default/images/banner/home/3/text1.png" />
-                </div>
-                <div className="text2">
-                  <img src="http://new.rrliuxue.com/WebResources/Default/images/banner/home/3/text2.png" />
-                </div>
-                <div className="text3">
-                  <img src="http://new.rrliuxue.com/WebResources/Default/images/banner/home/3/text3.png" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="slider-nav">
-            <div className="da-dots"></div>
-            <div className="da-arrows">
-                    <span className="da-arrows-prev">
-                        <img src="http://new.rrliuxue.com/WebResources/Default/images/banner-carousel-left.png" /></span>
-                    <span className="da-arrows-next">
-                        <img src="http://new.rrliuxue.com/WebResources/Default/images/banner-carousel-right.png" /></span>
-            </div>
-          </div>
-        </div>
+        <Slide />
         <div className="plan-box">
           <form id="planForm" method="post" action="#" autocomplete="off">
             <h1>免费获取留学方案</h1>
@@ -86,20 +39,37 @@ class Banner_Index {
             </ul>
             <div className="clear"></div>
             <ul className="other">
-              <li>
-                <select className="selectpicker show-menu-arrow form-control" id="date">
-                  <option value="">计划出国时间</option>
-                  <option value="2015">2015</option>
-                  <option value="2014">2014</option>
-                  <option value="2013">2013</option>
-                </select>
+              <li id="selectO">
+                <Select value="计划出国时间" style={{width:270,height:45}} optionFilterProp="desc"  renderDropdownToBody={true} onChange={this.handleChange}>
+                  <Option value="计划出国时间" desc="计划出国时间">计划出国时间</Option>
+                  <Option value="2015" desc="2015 ">2015</Option>
+                  <Option value="2014" desc="2014">2014</Option>
+                  <Option value="2013" desc="2013">2013</Option>
+                </Select>
               </li>
-              <li>
-                <select className="selectpicker show-menu-arrow form-control" id="grade">
-                  <option value="">目前就读年级</option>
-                  <option value="一年级">一年级</option>
-                  <option value="二年级">二年级</option>
-                </select>
+              <li id="select1">
+                <Select value="目前就读年级" style={{width:270,height:45}} optionFilterProp="desc"  renderDropdownToBody={true} onChange={this.handleChange}>
+                  <Option value="目前就读年级" desc="目前就读年级">目前就读年级</Option>
+                  <Option selected="selected" value="本科大四">本科大四</Option>
+                  <Option value="本科大三">本科大三</Option>
+                  <Option value="本科大二">本科大二</Option>
+                  <Option value="本科大一">本科大一</Option>
+                  <Option value="大专大三">大专大三</Option>
+                  <Option value="大专大二">大专大二</Option>
+                  <Option value="大专大一">大专大一</Option>
+                  <Option value="高三">高三</Option>
+                  <Option value="高二">高二</Option>
+                  <Option value="高一">高一</Option>
+                  <Option value="初三">初三</Option>
+                  <Option value="初二">初二</Option>
+                  <Option value="初一">初一</Option>
+                  <Option value="硕士毕业已工作">硕士毕业已工作</Option>
+                  <Option value="硕士在读">硕士在读</Option>
+                  <Option value="本科毕业已工作">本科毕业已工作</Option>
+                  <Option value="大专毕业三年以上">大专毕业三年以上</Option>
+                  <Option value="大专毕业三年以下">大专毕业三年以下</Option>
+                  <Option value="高三毕业已工作">高三毕业已工作</Option>
+                </Select>
               </li>
               <li>
                 <button className="btn-plan" type="submit">获取留学方案</button>
@@ -114,8 +84,16 @@ class Banner_Index {
           </form>
         </div>
       </section>
-
     );
+  }
+  //dom加载完调用
+  componentDidMount(){
+    $(document).ready(function(){
+      $("#planCountry").find("li").click(function () {
+        $(this).parent().find("li").removeClass("active");
+        $(this).addClass("active");
+      });
+    })
   }
 }
 

@@ -1,6 +1,8 @@
 /*! React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
 
 import React, { PropTypes } from 'react';
+import $ from 'jquery';
+
 class XiangQuDeGuoJia {
 
     static contextTypes = {
@@ -39,7 +41,23 @@ class XiangQuDeGuoJia {
             </div>
         );
     }
+    //dom加载完调用
+    componentDidMount(){
+        $(document).ready(function(){
+            $("#wishCountry").find("li").click(function () {
+                var box = $(this).parent();
+                $(this).parent().find("li").removeClass("active");
+                $(this).addClass("active");
+                var country = box.find("li.active").data("country");
 
+                if (country) {
+                    var index = schoolcontainer.find(".school-container#" + country + "Wish").index();
+                    schoolcontainer.animate({ marginLeft: "-" + (index * 1024) + "px" }, 400);
+
+                }
+            });
+        })
+    }
 }
 
 export default XiangQuDeGuoJia;

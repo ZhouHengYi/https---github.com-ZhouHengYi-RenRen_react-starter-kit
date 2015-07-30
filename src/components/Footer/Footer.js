@@ -5,6 +5,7 @@ import styles from './Footer.less';
 import withViewport from '../../decorators/withViewport';
 import withStyles from '../../decorators/withStyles';
 import Link from '../../utils/Link';
+import $ from 'jquery';
 
 @withViewport
 @withStyles(styles)
@@ -29,12 +30,12 @@ class Footer {
             <ul id="QR">
               <li className="weibo">
                 <div className="qr-view">
-                  <div className="qr-box"><img src="/WebResources/Default/images/qr/weibo.jpg" /></div>
+                  <div className="qr-box"><img src="http://new.rrliuxue.com/WebResources/Default/images/qr/weibo.jpg" /></div>
                 </div>
               </li>
               <li className="weixin">
                 <div className="qr-view">
-                  <div className="qr-box"><img src="/WebResources/Default/images/qr/weixin.jpg" /></div>
+                  <div className="qr-box"><img src="http://new.rrliuxue.com/WebResources/Default/images/qr/weixin.jpg" /></div>
                 </div>
               </li>
               <li className="renren">
@@ -73,7 +74,15 @@ class Footer {
       </div>
     );
   }
-
+  componentDidMount() {
+    $("#QR").find("li").hover(function () {
+      $(this).addClass("hover");
+      $(this).find(".qr-view").fadeIn();
+    }, function () {
+      $(this).find(".qr-view").hide();
+      $(this).removeClass("hover");
+    });
+  }
 }
 
 export default Footer;

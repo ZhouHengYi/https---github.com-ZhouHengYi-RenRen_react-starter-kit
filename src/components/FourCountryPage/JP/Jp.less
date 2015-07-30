@@ -1,0 +1,1009 @@
+@import "../../themecolor.less";
+@import "../../function.less";
+@import "../../Banner/JP/Banner/Slide.less";
+
+@tablinebgbolor: #EDEDED;
+@smallThingAnimduration: 15s;
+
+/*#region 小物件动画 */
+@-webkit-keyframes fanGreenAnim {
+  0% {
+    left: 12%;
+    top: 30px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 14%;
+    top: 60px;
+    transform: rotate(100deg);
+  }
+
+  50% {
+    left: 12%;
+    top: 90px;
+    transform: rotate(200deg);
+  }
+
+  75% {
+    left: 10%;
+    top: 60px;
+    transform: rotate(100deg);
+  }
+
+  100% {
+    left: 12%;
+    top: 30px;
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes fanYellowAnim {
+  0% {
+    left: 14%;
+    top: 360px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 16%;
+    top: 390px;
+    transform: rotate(100deg);
+  }
+
+  50% {
+    left: 14%;
+    top: 420px;
+    transform: rotate(200deg);
+  }
+
+  75% {
+    left: 12%;
+    top: 390px;
+    transform: rotate(100deg);
+  }
+
+  100% {
+    left: 14%;
+    top: 360px;
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes grassAnim {
+  0% {
+    left: 38%;
+    top: 480px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 40%;
+    top: 510px;
+    transform: rotate(100deg);
+  }
+
+  50% {
+    left: 38%;
+    top: 540px;
+    transform: rotate(200deg);
+  }
+
+  75% {
+    left: 36%;
+    top: 510px;
+    transform: rotate(100deg);
+  }
+
+  100% {
+    left: 38%;
+    top: 480px;
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes sandalsAnim {
+  0% {
+    left: 52%;
+    top: 10px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 54%;
+    top: 40px;
+    transform: rotate(60deg);
+  }
+
+  50% {
+    left: 52%;
+    top: 70px;
+    transform: rotate(120deg);
+  }
+
+  75% {
+    left: 50%;
+    top: 40px;
+    transform: rotate(60deg);
+  }
+
+  100% {
+    left: 52%;
+    top: 70px;
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes warriorAnim {
+  0% {
+    left: 80%;
+    top: 390px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 82%;
+    top: 420px;
+    transform: rotate(60deg);
+  }
+
+  50% {
+    left: 80%;
+    top: 450px;
+    transform: rotate(120deg);
+  }
+
+  75% {
+    left: 78%;
+    top: 420px;
+    transform: rotate(60deg);
+  }
+
+  100% {
+    left: 80%;
+    top: 390px;
+    transform: rotate(0deg);
+  }
+}
+
+@-moz-keyframes fanGreenAnim {
+  0% {
+    left: 12%;
+    top: 30px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 14%;
+    top: 60px;
+    transform: rotate(100deg);
+  }
+
+  50% {
+    left: 12%;
+    top: 90px;
+    transform: rotate(200deg);
+  }
+
+  75% {
+    left: 10%;
+    top: 60px;
+    transform: rotate(100deg);
+  }
+
+  100% {
+    left: 12%;
+    top: 30px;
+    transform: rotate(0deg);
+  }
+}
+
+@-moz-keyframes fanYellowAnim {
+  0% {
+    left: 14%;
+    top: 360px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 16%;
+    top: 390px;
+    transform: rotate(100deg);
+  }
+
+  50% {
+    left: 14%;
+    top: 420px;
+    transform: rotate(200deg);
+  }
+
+  75% {
+    left: 12%;
+    top: 390px;
+    transform: rotate(100deg);
+  }
+
+  100% {
+    left: 14%;
+    top: 360px;
+    transform: rotate(0deg);
+  }
+}
+
+@-moz-keyframes grassAnim {
+  0% {
+    left: 38%;
+    top: 480px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 40%;
+    top: 510px;
+    transform: rotate(100deg);
+  }
+
+  50% {
+    left: 38%;
+    top: 540px;
+    transform: rotate(200deg);
+  }
+
+  75% {
+    left: 36%;
+    top: 510px;
+    transform: rotate(100deg);
+  }
+
+  100% {
+    left: 38%;
+    top: 480px;
+    transform: rotate(0deg);
+  }
+}
+
+@-moz-keyframes sandalsAnim {
+  0% {
+    left: 52%;
+    top: 10px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 54%;
+    top: 40px;
+    transform: rotate(60deg);
+  }
+
+  50% {
+    left: 52%;
+    top: 70px;
+    transform: rotate(120deg);
+  }
+
+  75% {
+    left: 50%;
+    top: 40px;
+    transform: rotate(60deg);
+  }
+
+  100% {
+    left: 52%;
+    top: 70px;
+    transform: rotate(0deg);
+  }
+}
+
+@-moz-keyframes warriorAnim {
+  0% {
+    left: 80%;
+    top: 390px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 82%;
+    top: 420px;
+    transform: rotate(60deg);
+  }
+
+  50% {
+    left: 80%;
+    top: 450px;
+    transform: rotate(120deg);
+  }
+
+  75% {
+    left: 78%;
+    top: 420px;
+    transform: rotate(60deg);
+  }
+
+  100% {
+    left: 80%;
+    top: 390px;
+    transform: rotate(0deg);
+  }
+}
+
+
+@-o-keyframes fanGreenAnim {
+  0% {
+    left: 12%;
+    top: 30px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 14%;
+    top: 60px;
+    transform: rotate(100deg);
+  }
+
+  50% {
+    left: 12%;
+    top: 90px;
+    transform: rotate(200deg);
+  }
+
+  75% {
+    left: 10%;
+    top: 60px;
+    transform: rotate(100deg);
+  }
+
+  100% {
+    left: 12%;
+    top: 30px;
+    transform: rotate(0deg);
+  }
+}
+
+@-o-keyframes fanYellowAnim {
+  0% {
+    left: 14%;
+    top: 360px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 16%;
+    top: 390px;
+    transform: rotate(100deg);
+  }
+
+  50% {
+    left: 14%;
+    top: 420px;
+    transform: rotate(200deg);
+  }
+
+  75% {
+    left: 12%;
+    top: 390px;
+    transform: rotate(100deg);
+  }
+
+  100% {
+    left: 14%;
+    top: 360px;
+    transform: rotate(0deg);
+  }
+}
+
+@-o-keyframes grassAnim {
+  0% {
+    left: 38%;
+    top: 480px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 40%;
+    top: 510px;
+    transform: rotate(100deg);
+  }
+
+  50% {
+    left: 38%;
+    top: 540px;
+    transform: rotate(200deg);
+  }
+
+  75% {
+    left: 36%;
+    top: 510px;
+    transform: rotate(100deg);
+  }
+
+  100% {
+    left: 38%;
+    top: 480px;
+    transform: rotate(0deg);
+  }
+}
+
+@-o-keyframes sandalsAnim {
+  0% {
+    left: 52%;
+    top: 10px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 54%;
+    top: 40px;
+    transform: rotate(60deg);
+  }
+
+  50% {
+    left: 52%;
+    top: 70px;
+    transform: rotate(120deg);
+  }
+
+  75% {
+    left: 50%;
+    top: 40px;
+    transform: rotate(60deg);
+  }
+
+  100% {
+    left: 52%;
+    top: 70px;
+    transform: rotate(0deg);
+  }
+}
+
+@-o-keyframes warriorAnim {
+  0% {
+    left: 80%;
+    top: 390px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 82%;
+    top: 420px;
+    transform: rotate(60deg);
+  }
+
+  50% {
+    left: 80%;
+    top: 450px;
+    transform: rotate(120deg);
+  }
+
+  75% {
+    left: 78%;
+    top: 420px;
+    transform: rotate(60deg);
+  }
+
+  100% {
+    left: 80%;
+    top: 390px;
+    transform: rotate(0deg);
+  }
+}
+
+@-ms-keyframes fanGreenAnim {
+  0% {
+    left: 12%;
+    top: 30px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 14%;
+    top: 60px;
+    transform: rotate(100deg);
+  }
+
+  50% {
+    left: 12%;
+    top: 90px;
+    transform: rotate(200deg);
+  }
+
+  75% {
+    left: 10%;
+    top: 60px;
+    transform: rotate(100deg);
+  }
+
+  100% {
+    left: 12%;
+    top: 30px;
+    transform: rotate(0deg);
+  }
+}
+
+@-ms-keyframes fanYellowAnim {
+  0% {
+    left: 14%;
+    top: 360px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 16%;
+    top: 390px;
+    transform: rotate(100deg);
+  }
+
+  50% {
+    left: 14%;
+    top: 420px;
+    transform: rotate(200deg);
+  }
+
+  75% {
+    left: 12%;
+    top: 390px;
+    transform: rotate(100deg);
+  }
+
+  100% {
+    left: 14%;
+    top: 360px;
+    transform: rotate(0deg);
+  }
+}
+
+@-ms-keyframes grassAnim {
+  0% {
+    left: 38%;
+    top: 480px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 40%;
+    top: 510px;
+    transform: rotate(100deg);
+  }
+
+  50% {
+    left: 38%;
+    top: 540px;
+    transform: rotate(200deg);
+  }
+
+  75% {
+    left: 36%;
+    top: 510px;
+    transform: rotate(100deg);
+  }
+
+  100% {
+    left: 38%;
+    top: 480px;
+    transform: rotate(0deg);
+  }
+}
+
+@-ms-keyframes sandalsAnim {
+  0% {
+    left: 52%;
+    top: 10px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 54%;
+    top: 40px;
+    transform: rotate(60deg);
+  }
+
+  50% {
+    left: 52%;
+    top: 70px;
+    transform: rotate(120deg);
+  }
+
+  75% {
+    left: 50%;
+    top: 40px;
+    transform: rotate(60deg);
+  }
+
+  100% {
+    left: 52%;
+    top: 70px;
+    transform: rotate(0deg);
+  }
+}
+
+@-ms-keyframes warriorAnim {
+  0% {
+    left: 80%;
+    top: 390px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 82%;
+    top: 420px;
+    transform: rotate(60deg);
+  }
+
+  50% {
+    left: 80%;
+    top: 450px;
+    transform: rotate(120deg);
+  }
+
+  75% {
+    left: 78%;
+    top: 420px;
+    transform: rotate(60deg);
+  }
+
+  100% {
+    left: 80%;
+    top: 390px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes fanGreenAnim {
+  0% {
+    left: 12%;
+    top: 30px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 14%;
+    top: 60px;
+    transform: rotate(100deg);
+  }
+
+  50% {
+    left: 12%;
+    top: 90px;
+    transform: rotate(200deg);
+  }
+
+  75% {
+    left: 10%;
+    top: 60px;
+    transform: rotate(100deg);
+  }
+
+  100% {
+    left: 12%;
+    top: 30px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes fanYellowAnim {
+  0% {
+    left: 14%;
+    top: 360px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 16%;
+    top: 390px;
+    transform: rotate(100deg);
+  }
+
+  50% {
+    left: 14%;
+    top: 420px;
+    transform: rotate(200deg);
+  }
+
+  75% {
+    left: 12%;
+    top: 390px;
+    transform: rotate(100deg);
+  }
+
+  100% {
+    left: 14%;
+    top: 360px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes grassAnim {
+  0% {
+    left: 38%;
+    top: 480px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 40%;
+    top: 510px;
+    transform: rotate(100deg);
+  }
+
+  50% {
+    left: 38%;
+    top: 540px;
+    transform: rotate(200deg);
+  }
+
+  75% {
+    left: 36%;
+    top: 510px;
+    transform: rotate(100deg);
+  }
+
+  100% {
+    left: 38%;
+    top: 480px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes sandalsAnim {
+  0% {
+    left: 52%;
+    top: 10px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 54%;
+    top: 40px;
+    transform: rotate(60deg);
+  }
+
+  50% {
+    left: 52%;
+    top: 70px;
+    transform: rotate(120deg);
+  }
+
+  75% {
+    left: 50%;
+    top: 40px;
+    transform: rotate(60deg);
+  }
+
+  100% {
+    left: 52%;
+    top: 70px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes warriorAnim {
+  0% {
+    left: 80%;
+    top: 390px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 82%;
+    top: 420px;
+    transform: rotate(60deg);
+  }
+
+  50% {
+    left: 80%;
+    top: 450px;
+    transform: rotate(120deg);
+  }
+
+  75% {
+    left: 78%;
+    top: 420px;
+    transform: rotate(60deg);
+  }
+
+  100% {
+    left: 80%;
+    top: 390px;
+    transform: rotate(0deg);
+  }
+}
+/*#endregion */
+
+.plan-box {
+  width: 1024px;
+  margin: -627px auto;
+  padding-left: 45px;
+  position: relative;
+  z-index: 10;
+
+  form {
+    width: 334px;
+    height: 386px;
+    background: url(../../WebResources/Default/Images/plan/JP-form.png) no-repeat;
+
+    h1 {
+      font-weight: bold;
+      text-align: center;
+      font-size: 22px;
+      padding: 30px 0 12px 0;
+      margin-bottom: 28px;
+      color: @themecolor;
+      border-bottom: 1px solid @themecolor;
+      width: 240px;
+    }
+
+    ul {
+      width: 270px;
+      margin: 0 auto;
+
+      .dropdown-menu {
+        li {
+          padding: 0;
+        }
+      }
+
+      li {
+        padding: 7px 0;
+      }
+
+      select, button, input {
+        width: 100%;
+        line-height: normal;
+      }
+
+      .bootstrap-select {
+        .btn-default {
+          &.dropdown-toggle {
+            border-color: #7a7c86;
+          }
+        }
+
+        &.open {
+          .btn-default {
+            &.dropdown-toggle {
+              border-color: #7a7c86;
+            }
+          }
+        }
+
+        .dropdown-menu {
+          border-color: #7a7c86;
+
+          li {
+            padding: 0;
+
+            &.selected {
+
+              a {
+                &:hover {
+                  background: #7a7c86;
+                  color: #fff;
+                }
+
+                background: none;
+                color: #000;
+              }
+            }
+          }
+
+          a {
+
+            &:focus {
+              border: 0;
+            }
+
+            &:hover {
+              background: #7a7c86;
+              color: #fff;
+            }
+          }
+        }
+
+        &.show-menu-arrow {
+          .form-control, &.form-control {
+            height: 45px;
+          }
+
+          .filter-option, .text {
+            font-size: 17px;
+          }
+
+          .filter-option {
+            color: @graydeepcolor;
+          }
+        }
+      }
+
+
+      button.btn-plan {
+        height: 45px;
+        background: url("../../WebResources/Default/Images/left.png") no-repeat 88% center @themecolor;
+        color: #fff;
+        border: 1px solid @themedeep2color;
+        font-size: 22px;
+        font-weight: bold;
+        .border-radius(5px);
+        text-align: left;
+        padding-left: 35px;
+        line-height: 45px;
+      }
+    }
+
+    .bottom {
+      position: absolute;
+      bottom: 40px;
+      width: 334px;
+
+      p {
+        margin: auto;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        color: #000;
+      }
+
+      .message {
+        margin-top: 15px;
+        background: url("../../WebResources/Default/Images/horn.png") no-repeat 36px center;
+        padding-left: 60px;
+        font-size: 12px;
+        color: #000;
+
+        span {
+          color: #f00707;
+          padding: 0 3px;
+        }
+
+        a {
+          text-decoration: underline;
+          color: #f00707;
+        }
+      }
+    }
+  }
+}
+
+/** 院校 **/
+.country-hot-school {
+  width: 100%;
+  background: #f0f0f0;
+  margin: 868px 0 25px 0;
+  position: relative;
+
+  .content {
+    width: 1024px;
+    margin: 0 auto;
+    position: relative;
+    padding: 60px 0 90px 0;
+
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+      text-align: center;
+      margin: 5px auto 35px auto;
+      color: #000;
+    }
+
+    .school-box-hr {
+      border-left: 2px dashed #fff;
+      float: left;
+      height: 440px;
+    }
+
+
+  }
+}
+
+
+
+
+.country-apply-flow {
+  width: 1024px;
+  margin: 0 auto;
+  position: relative;
+
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    margin: 30px auto 55px auto;
+  }
+}

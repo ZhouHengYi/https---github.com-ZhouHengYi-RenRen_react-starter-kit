@@ -1,0 +1,192 @@
+@import "../../../themecolor.less";
+@import "../../../function.less";
+@import "../../Index/Select.less";
+@import "../../Index/animations.less";
+@import "../../Index/animations1024.less";
+@import "../../Index/animations1250.less";
+
+
+@austhemecolor: #f38b05;
+@tablinebgbolor: #EDEDED;
+
+html{
+  body{
+    .bgShadow{
+      background-color: #f7f0e4;
+      display: block;
+      height: 680px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    .aus-banner1 {
+      background: url(../../../WebResources/Default/Images/banner/AUS/bg.jpg) no-repeat center top #000;
+      height: 680px;
+      position: relative;
+      top: 0;
+      left: 0;
+      h2 {
+        margin: auto;
+        left: 50%;
+        top: 128px;
+        position: absolute;
+      }
+      &.slick-active{
+        h2{
+          .animation(ausfromRightAnim1 0.6s ease-in 0.8s both);
+        }
+      }
+    }
+    .plan-box {
+      width: 1024px;
+      margin: -627px auto;
+      padding-left: 45px;
+      position: relative;
+      z-index: 10;
+
+      form {
+        width: 413px;
+        height: 345px;
+        background: url(../../../WebResources/Default/Images/plan/AUS-form.png) no-repeat;
+
+        h1 {
+          font-weight: bold;
+          text-align: center;
+          font-size: 22px;
+          padding-top: 25px;
+          margin-bottom: 40px;
+          color: #fff;
+        }
+
+        ul {
+          width: 270px;
+          margin: 0 auto;
+
+          .dropdown-menu {
+            li {
+              padding: 0;
+            }
+          }
+
+          li {
+            padding: 7px 0;
+          }
+
+          select, button, input {
+            width: 100%;
+            line-height: normal;
+          }
+
+          .bootstrap-select {
+            .btn-default {
+              &.dropdown-toggle {
+                border-color: #7a7c86;
+              }
+            }
+
+            &.open {
+              .btn-default {
+                &.dropdown-toggle {
+                  border-color: @austhemecolor;
+                }
+              }
+            }
+
+            .dropdown-menu {
+              border-color: @austhemecolor;
+
+              li {
+                padding: 0;
+
+                &.selected {
+
+                  a {
+                    &:hover {
+                      background: @austhemecolor;
+                      color: #fff;
+                    }
+
+                    background: none;
+                    color: #000;
+                  }
+                }
+              }
+
+              a {
+
+                &:focus {
+                  border: 0;
+                }
+
+                &:hover {
+                  background: @austhemecolor;
+                  color: #fff;
+                }
+              }
+            }
+
+            &.show-menu-arrow {
+              .form-control, &.form-control {
+                height: 45px;
+              }
+
+              .filter-option, .text {
+                font-size: 17px;
+              }
+
+              .filter-option {
+                color: @graydeepcolor;
+              }
+            }
+          }
+
+
+          button.btn-plan {
+            height: 45px;
+            background: url("../../../WebResources/Default/Images/left.png") no-repeat 88% center @austhemecolor;
+            color: #fff;
+            border: 1px solid #de7f03;
+            font-size: 22px;
+            font-weight: bold;
+            .border-radius(5px);
+            text-align: left;
+            padding-left: 35px;
+            line-height: 45px;
+          }
+        }
+
+        .bottom {
+          position: absolute;
+          bottom: 25px;
+          width: 413px;
+
+          p {
+            margin: auto;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            color: @austhemecolor;
+          }
+
+          .message {
+            margin-top: 6px;
+            background: url("../../../WebResources/Default/Images/horn-yellow.png") no-repeat 62px center;
+            padding-left: 88px;
+            font-size: 12px;
+            color: @austhemecolor;
+
+            span {
+              color: #ff5e52;
+              padding: 0 3px;
+            }
+
+            a {
+              text-decoration: underline;
+              color: #ff5e52;
+            }
+          }
+        }
+      }
+    }
+  }
+}

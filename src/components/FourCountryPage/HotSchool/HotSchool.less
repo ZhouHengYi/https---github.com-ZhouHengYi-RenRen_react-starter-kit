@@ -1,0 +1,152 @@
+@import "../../themecolor.less";
+@import "../../function.less";
+@import '../../control.less';
+
+html{
+  body {
+    .country-school-list {
+      width: 472px;
+      height: 440px;
+      margin: auto auto auto 10px;
+      float: left;
+
+
+      .hot-school-box {
+        background: #fff;
+        .border-radius(5px);
+
+        .school-detail {
+          padding: 15px;
+
+          .school-pic {
+            float: left;
+          }
+
+          .school-info {
+            float: left;
+            margin-left: 15px;
+            width: 205px;
+
+            h3 {
+              font-size: 18px;
+              margin: 6px auto auto auto;
+
+              a {
+                text-decoration: none;
+                .outline-none();
+                color: @hotschoolcolor;
+              }
+            }
+
+            .location {
+              background: url("../../WebResources/Default/Images/hot-school/location.png") no-repeat left center;
+              color: #9f9f9f;
+              font-size: 14px;
+              height: 40px;
+              text-indent: 28px;
+              line-height: 40px;
+            }
+
+            .description {
+              font-size: 12px;
+              color: #9f9f9f;
+            }
+
+            .action {
+              position: relative;
+              bottom: -10px;
+
+              a {
+                display: block;
+                width: 72px;
+                height: 33px;
+                color: #fff;
+                background: @hotschoolcolor;
+                border: 2px solid @hotschoolbtnbordercolor;
+                .border-radius(3px);
+                text-align: center;
+                padding-top: 5px;
+                letter-spacing: 4px;
+                text-decoration: none;
+                .outline-none();
+              }
+            }
+          }
+        }
+
+        .school-list {
+          padding: 0 0 0 15px;
+          height: 113px;
+
+          .item {
+            float: left;
+            padding-right: 10px;
+
+            &:hover {
+              .title-box {
+                .opacity(1);
+              }
+            }
+
+            a {
+              color: #fff;
+              text-decoration: none;
+              .outline-none();
+            }
+
+            &.more {
+              .title-box {
+                .opacity(1);
+              }
+
+              a {
+                display: block;
+                background: @themecolor;
+                width: 98px;
+                height: 98px;
+
+                .title-box {
+                  margin-top: 42px;
+                }
+              }
+            }
+
+            .title-box {
+              height: 20px;
+              position: absolute;
+              margin-top: -56px;
+              .opacity(1);
+              .transition();
+
+              .title {
+                font-size: 12px;
+                text-align: center;
+                color: #fff;
+                position: relative;
+                top: 0;
+                width: 98px;
+                height: 20px;
+                z-index: 3;
+              }
+
+              .bg {
+                position: relative;
+                width: 98px;
+                height: 20px;
+                background: #000;
+                .opacity(0.7);
+                top: -20px;
+                z-index: 2;
+              }
+            }
+
+            img {
+              width: 98px;
+              height: 98px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

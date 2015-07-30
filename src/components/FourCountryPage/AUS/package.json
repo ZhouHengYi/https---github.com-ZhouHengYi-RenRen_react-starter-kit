@@ -1,0 +1,6 @@
+{
+  "name": "AUS",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./AUS.js"
+}

@@ -1,0 +1,285 @@
+@import "../../themecolor.less";
+@import "../../function.less";
+@import '../../control.less';
+
+
+/** ม๔ัง **/
+.country-education-study-abroad {
+  width: 1024px;
+  margin: 0 auto;
+  position: relative;
+  //padding: 0 15px;
+  .major-tabs-box {
+    .major-tabs {
+      border-top: 1px solid @hrcolor;
+      border-right: 1px solid @hrcolor;
+      z-index: 1;
+
+      .item {
+        background: #fff;
+        float: left;
+
+        &.selected {
+          .title {
+            height: 43px;
+            border-top: 2px solid @themecolor;
+            background: #fff;
+            z-index: 3;
+            cursor: auto;
+          }
+
+          &.bachelor {
+            width: 1023px;
+          }
+
+          &.master {
+            width: 880px;
+          }
+
+          &.high {
+            width: 737px;
+          }
+
+          .more {
+            visibility: visible;
+          }
+        }
+
+        &.bachelor {
+          width: 550px;
+        }
+
+        &.master {
+          margin-left: 143px;
+          margin-top: -42px;
+          width: 550px;
+        }
+
+        &.high {
+          width: 550px;
+          margin-left: 286px;
+          margin-top: -42px;
+        }
+
+        .title {
+          position: absolute;
+          height: 42px;
+          font-size: 18px;
+          padding: 6px 35px 8px 35px;
+          border-top: 2px solid #fff;
+          border-left: 1px solid @hrcolor;
+          border-right: 1px solid @hrcolor;
+          float: left;
+          z-index: 2;
+          cursor: pointer;
+          .transition();
+        }
+
+        .more {
+          float: right;
+          height: 42px;
+          line-height: 42px;
+          padding-right: 45px;
+          visibility: hidden;
+
+          a {
+            color: @themecolor;
+          }
+        }
+      }
+    }
+
+    .major-tab-content {
+      border: 1px solid @hrcolor;
+      background: #fff;
+
+      .tab-content-box {
+        height: 305px;
+        display: none;
+      }
+
+      .study-abroad-box {
+        padding: 20px;
+
+        .review-box {
+          width: 275px;
+          float: left;
+
+          .major {
+            padding-left: 5px;
+
+            h4 {
+              font-size: 18px;
+
+              a {
+                color: @themecolor;
+                text-decoration: none;
+                .outline-none();
+              }
+            }
+
+            .description {
+              color: @graydeepcolor;
+              font-size: 12px;
+              width: 268px;
+              line-height: 20px;
+            }
+          }
+
+          .hr {
+            margin: 11px auto 9px auto;
+            border-top: 1px dashed @hrcolor;
+          }
+
+          .list {
+            padding-left: 5px;
+
+            li {
+              line-height: 22px;
+              background: url("../../WebResources/Default/Images/news-li.jpg") no-repeat left center;
+              text-indent: 20px;
+
+              a {
+                display: block;
+                width: 100%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                font-size: 12px;
+                color: @graydeepcolor;
+              }
+            }
+          }
+        }
+
+        .advertisement-box {
+          width: 230px;
+          text-align: center;
+          margin: 0 45px;
+          float: left;
+
+          a {
+            display: block;
+            margin-bottom: 20px;
+          }
+        }
+
+        .third-box {
+          float: left;
+
+          .minor-tabs {
+            width: 290px;
+
+            .tabs {
+              border: 0;
+              width: 100%;
+              background: @graylightcolor;
+              border-top-left-radius: 8px;
+              border-top-right-radius: 8px;
+
+              .item {
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                padding: 10px 30px;
+                float: left;
+                cursor: pointer;
+                background: @graylightcolor;
+                border-top: 2px solid @graylightcolor;
+                .transition();
+
+                &.selected {
+                  border-top: 2px solid @themecolor;
+                  background: #fff;
+                  cursor: auto;
+                }
+              }
+            }
+
+            .tab-content {
+              border: 0;
+
+              .tab-content-box {
+                height: 130px;
+                display: none;
+              }
+
+              .skill-box {
+                .list {
+                  margin: auto;
+                  padding: 15px 0 0 30px;
+
+                  li {
+                    line-height: 22px;
+                    background: url("../../WebResources/Default/Images/news-li.jpg") no-repeat left center;
+                    text-indent: 20px;
+
+                    a {
+                      display: block;
+                      width: 100%;
+                      text-overflow: ellipsis;
+                      white-space: nowrap;
+                      overflow: hidden;
+                      font-size: 12px;
+                      color: @graydeepcolor;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .hr {
+            margin: 5px auto 15px 25px;
+            border-top: 1px solid @hrcolor;
+          }
+
+          .education-school {
+            width: 333px;
+            height: 58px;
+            position: relative;
+            overflow: hidden;
+
+            .slide {
+              float: left;
+              position: relative;
+              width: 60px;
+              margin-right: 10px;
+            }
+
+            .school-container {
+              margin-left: 31.5px;
+            }
+
+            .bx-wrapper {
+              .school-container {
+                margin-left: auto;
+              }
+
+              .bx-controls-direction {
+                a {
+                  position: absolute;
+                  top: 50%;
+                  margin-top: -12px;
+                  outline: 0;
+                  width: 12px;
+                  height: 20px;
+                  text-indent: -9999px;
+
+                  &.bx-prev {
+                    margin-left: -40px;
+                    background: url("../../WebResources/Default/Images/study-abroad/prev.png") no-repeat left top;
+                  }
+
+                  &.bx-next {
+                    margin-right: -40px;
+                    background: url("../../WebResources/Default/Images/study-abroad/next.png") no-repeat left top;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

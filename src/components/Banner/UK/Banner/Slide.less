@@ -1,0 +1,247 @@
+@import "../../../function.less";
+
+html {
+    body {
+        .div_banner{
+            display: block;
+            .bgShadow{
+                background-color: #49c4fa;
+                display: block;
+                height: 680px;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+        }
+        .slick-dots {
+            bottom: 30px;
+            right: 30%;
+            width: 90px;
+
+            li {
+                button {
+                    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+                    border: 1px solid #fff;
+                    border-radius: 50%;
+                    display: inline-block;
+                    height: 12px;
+                    margin: auto 8px 5px auto;
+                    position: relative;
+                    width: 12px;
+
+                    &::before {
+                        content: "";
+                    }
+                }
+
+                &.slick-active {
+                    button {
+                        background: #fff;
+                    }
+                }
+            }
+        }
+
+        .slick-next {
+            right: 27%;
+            top: 95%;
+        }
+
+        .slick-prev {
+            left: 70%;
+            top: 95%;
+        }
+
+        .slide1 {
+            background: url(http://new.rrliuxue.com/WebResources/Default/images/banner/home/sky.png) no-repeat 25% top #49c4fa;
+            position: relative;
+            height: 680px;
+            display: none;
+
+            h2 {
+                position: absolute;
+                left: 36%;
+                margin: auto;
+                top: 0;
+                .animation(hometoRightAnim1 0.6s ease-in 0.6s both);
+            }
+
+            p {
+                position: absolute;
+                left: 55%;
+                top: 42px;
+                .animation(hometoRightAnim2 0.6s ease-in 0.3s both);
+            }
+
+            .da-img {
+                left: 47.2%;
+                top: 292px;
+                position: absolute;
+                .animation(hometoRightAnim3 0.6s ease-in both);
+            }
+
+            &.slick-active {
+                h2 {
+                    .animation(homefromLeftAnim1 0.8s ease-in 1s both);
+                }
+
+                p {
+                    .animation(homefromLeftAnim2 0.6s ease-in 1.6s both);
+                }
+
+                .da-img {
+                    .animation(homefromLeftAnim3 0.6s ease-in 2s both);
+                }
+            }
+        }
+
+        .slide2 {
+            background: url(http://new.rrliuxue.com/WebResources/Default/images/banner/home/2/bg.jpg) no-repeat center top #2d2f3e;
+            position: relative;
+            height: 680px;
+            display: none;
+
+            .slide-img-box {
+                left: 0;
+                margin-top: -117px;
+                padding-left: 355px;
+                position: absolute;
+                top: 50%;
+                width: 100%;
+
+                .slide-img-content {
+                    height: 234px;
+                    margin: 0 auto;
+                    position: relative;
+                    width: 660px;
+
+                    .arrow {
+                        float: left;
+                        left: 0;
+                        padding: 40px 30px 0 0;
+                        position: relative;
+                        .animation(hometoLeftBanner2Anim1 0.4s ease-in both);
+                    }
+
+                    .text-content {
+                        float: left;
+                        height: 234px;
+                        width: 490px;
+                        z-index: 101;
+
+                        .text1 {
+                            position: relative;
+                            top: 0;
+                            z-index: 101;
+                            .animation(hometoLeftBanner2Anim2 0.6s ease-in both);
+                        }
+
+                        .text2 {
+                            margin: 24px auto 31px;
+                            position: relative;
+                            top: 0;
+                            z-index: 101;
+                            .animation(hometoLeftBanner2Anim3 0.6s ease-in 0.2s both);
+                        }
+
+                        .text3 {
+                            position: relative;
+                            top: 0;
+                            z-index: 101;
+                            .animation(hometoLeftBanner2Anim4 0.6s ease-in 0.4s both);
+                        }
+                    }
+                }
+            }
+
+            &.slick-active {
+                .slide-img-box {
+                    .slide-img-content {
+                        .arrow {
+                            .animation(homefromRightBanner2Anim1 0.4s ease-in 1.4s both);
+                        }
+
+                        .text-content {
+
+                            .text1 {
+                                .animation(homefromRightBanner2Anim2 0.6s ease-in 1.4s both);
+                            }
+
+                            .text2 {
+                                .animation(homefromRightBanner2Anim3 0.6s ease-in 1.6s both);
+                            }
+
+                            .text3 {
+                                .animation(homefromRightBanner2Anim4 0.6s ease-in 1.8s both);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .slide3 {
+            position: relative;
+            height: 680px;
+            background: url(http://new.rrliuxue.com/WebResources/Default/images/banner/home/3/bg.jpg) no-repeat center top #fcba1e;
+            display: none;
+
+            .slide-img-box {
+                left: 0;
+                margin-top: -196px;
+                padding-left: 405px;
+                position: absolute;
+                top: 50%;
+                width: 100%;
+
+                .slide-img-content {
+                    height: 392px;
+                    margin: 0 auto;
+                    position: relative;
+                    width: 517px;
+
+                    .text1 {
+                        padding-bottom: 10px;
+                        position: relative;
+                        top: 0;
+                        z-index: 101;
+                        .animation(hometoRightBanner3Anim1 0.6s ease-in both);
+                    }
+
+                    .text2 {
+                        padding-bottom: 10px;
+                        position: relative;
+                        top: 0;
+                        z-index: 101;
+                        .animation(hometoRightBanner3Anim2 0.6s ease-in 0.2s both);
+                    }
+
+                    .text3 {
+                        position: relative;
+                        top: 0;
+                        z-index: 101;
+                        .animation(hometoRightBanner3Anim3 0.6s ease-in 0.4s both);
+                    }
+                }
+            }
+
+            &.slick-active {
+                .slide-img-box {
+                    .slide-img-content {
+                        .text1 {
+                            .animation(homefromRightBanner3Anim1 0.6s ease-in 1s both);
+                        }
+
+                        .text2 {
+                            .animation(homefromRightBanner3Anim2 0.6s ease-in 1.2s both);
+                        }
+
+                        .text3 {
+                            .animation(homefromRightBanner3Anim3 0.6s ease-in 1.6s both);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

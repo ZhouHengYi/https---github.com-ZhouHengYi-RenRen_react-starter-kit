@@ -1,0 +1,222 @@
+﻿@import "themecolor.less";
+@import "function.less";
+
+button, a {
+    cursor: pointer;
+
+    &.button-normal {
+        text-align: center;
+        border: 2px solid @themecolor;
+        background: @themecolor;
+        color: #fff;
+        .border-radius(5px);
+        .transition(all 0.2s ease-in-out);
+
+        &:hover {
+            border: 2px solid @themedeep2color;
+            background: @themedeep2color;
+        }
+
+        &:active {
+            border: 2px solid @themedeep3color;
+            background: @themedeep3color;
+        }
+
+        &:disabled {
+            border: 2px solid @graylight2color;
+            background: @graylight2color;
+        }
+    }
+
+    &.button-line {
+        text-align: center;
+        border: 2px solid @themecolor;
+        background: none;
+        color: @themecolor;
+        .border-radius(5px);
+        .transition(all 0.2s ease-in-out);
+
+        &.red {
+            border: 2px solid @themeredcolor;
+            color: @themeredcolor;
+
+            &:hover {
+                background: @themeredcolor;
+                border: 2px solid @themeredcolor;
+                color: #fff;
+            }
+
+            &:active {
+                background: @themedeep3redcolor;
+                border: 2px solid @themedeep3redcolor;
+                color: #fff;
+            }
+
+            &:disabled {
+                border: 2px solid @graylight2color;
+                color: #fff;
+                background: @graylight2color;
+            }
+        }
+
+        &.gray {
+            border: 2px solid @graybtn;
+            color: @graybtn;
+
+            &:hover {
+                background: @themecolor;
+                border: 2px solid @themecolor;
+                color: #fff;
+            }
+
+            &:active {
+                border: 2px solid @themedeep3color;
+                background: @themedeep3color;
+            }
+
+            &:disabled {
+                border: 2px solid @graylight2color;
+                background: @graylight2color;
+            }
+        }
+
+        &:hover {
+            border: 2px solid @themedeepcolor;
+            background: @themedeepcolor;
+            color: #fff;
+        }
+
+        &:active {
+            border: 2px solid @themedeep3color;
+            background: @themedeep3color;
+            color: #fff;
+        }
+
+        &:disabled {
+            border: 2px solid @graylight2color;
+            color: #fff;
+            background: @graylight2color;
+        }
+    }
+}
+
+a {
+    &.button-normal {
+        display: block;
+        text-decoration: none;
+        .outline-none();
+    }
+
+    &.button-line {
+        display: block;
+        text-decoration: none;
+        .outline-none();
+    }
+}
+
+input, textarea {
+    border: 1px solid #ccc;
+    background: none;
+    .border-radius(5px);
+    .transition();
+
+    &.error {
+        border-color: #ff0000 !important;
+
+        &:focus {
+            border-color: #ff0000 !important;
+            .box-shadow(0 0 3px #ff0000);
+        }
+    }
+
+    &:focus {
+        border-color: @themecolor;
+        .box-shadow(0 0 3px @themecolor);
+    }
+}
+
+.validation-code {
+    cursor: pointer;
+}
+
+.form-tips {
+    position: absolute;
+    cursor: default;
+    height: 30px;
+    width: 100%;
+    z-index: 1340;
+    .arrow {
+        float: left;
+        background: url("./WebResources/Default/Images/tips/arrow.png") no-repeat left center;
+        width: 5px;
+        height: 30px;
+    }
+
+    .tip-box {
+        float: left;
+        height: 30px;
+
+        .tip-top, .tip-bottom {
+            background: url("./WebResources/Default/Images/tips/tips.png") no-repeat;
+        }
+        .tip-center,.tip-content,.tip-center-box .tip-top,.tip-center-box .tip-bottom {
+            background: url("./WebResources/Default/Images/tips/bg.png") repeat;
+        }
+        .tip-left-box, .tip-right-box {
+            width: 4px;
+            height: 30px;
+            float: left;
+
+            .tip-top, .tip-bottom {
+                height: 4px;
+            }
+
+            .tip-center {
+                height: 22px;
+                
+            }
+        }
+
+        .tip-left-box {
+            .tip-top {
+                background-position:0 0;
+            }
+
+            .tip-bottom {
+                background-position:0 -4px;
+            }
+        }
+
+        .tip-right-box {
+            .tip-top {
+                background-position:-4px 0;
+            }
+
+            .tip-bottom {
+                background-position:-4px -4px;
+            }
+        }
+
+        .tip-center-box {
+            height: 30px;
+            float: left;
+
+            .tip-top, .tip-bottom {
+                height: 4px;
+            }
+
+            .tip-content {
+                font-size: 12px;
+                color: #fff;
+                height: 22px;
+                line-height: 22px;
+                padding: 0 10px;
+            }
+        }
+    }
+}
+.commend{
+    position: absolute;
+    z-index:2;
+    font-size:12px;
+}
